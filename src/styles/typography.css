@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
+:root {
+  --font-primary: 'Figtree', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  
+  /* Tamanhos de fonte */
+  --font-size-title: clamp(2.5rem, 5vw, 4rem);
+  --font-size-subtitle: clamp(1.8rem, 3vw, 2.5rem);
+  --font-size-body: clamp(1rem, 1.5vw, 1.2rem);
+  --font-size-button: clamp(1.1rem, 2vw, 1.5rem);
+  
+  /* Pesos de fonte */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Espaçamento de letras */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+}

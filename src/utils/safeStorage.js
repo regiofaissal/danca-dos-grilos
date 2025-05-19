@@ -1,4 +1,3 @@
-// Wrapper seguro para localStorage
 const safeStorage = {
   get: (key) => {
     if (typeof window === 'undefined') {
@@ -6,7 +5,6 @@ const safeStorage = {
       return null;
     }
 
-    // Check if localStorage is accessible
     try {
       const testKey = '__storage_test__';
       window.localStorage.setItem(testKey, testKey);
@@ -26,7 +24,6 @@ const safeStorage = {
       return false;
     }
 
-    // Check if localStorage is accessible
     try {
       const testKey = '__storage_test__';
       window.localStorage.setItem(testKey, testKey);
@@ -36,36 +33,6 @@ const safeStorage = {
       return true;
     } catch (error) {
       console.warn('Storage access is restricted:', error);
-      return false;
-    }
-  },
-
-  remove: (key) => {
-    try {
-      localStorage.removeItem(key);
-      return true;
-    } catch (error) {
-      console.warn('Erro ao remover do localStorage:', error);
-      return false;
-    }
-  },
-
-  clear: () => {
-    try {
-      localStorage.clear();
-      return true;
-    } catch (error) {
-      console.warn('Erro ao limpar localStorage:', error);
-      return false;
-    }
-  },
-
-  isAvailable: () => {
-    try {
-      localStorage.setItem('test', 'test');
-      localStorage.removeItem('test');
-      return true;
-    } catch (error) {
       return false;
     }
   }

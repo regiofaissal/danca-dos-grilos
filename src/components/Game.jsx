@@ -4,6 +4,7 @@ import '../styles/typography.css';
 import Cricket from './Cricket';
 import { FaArrowUp, FaArrowDown, FaArrowLeft, FaArrowRight, FaTrophy, FaMusic, FaVolumeMute } from 'react-icons/fa';
 import useSound from 'use-sound';
+import safeStorage from '../utils/safeStorage';
 
 const themes = {
   default: {
@@ -242,13 +243,9 @@ const Game = () => {
   });
 
   useEffect(() => {
-    try {
-      const savedScore = localStorage.getItem('highScore');
-      if (savedScore) {
-        setHighScore(parseInt(savedScore));
-      }
-    } catch (error) {
-      console.warn('Erro ao acessar o localStorage:', error);
+    const savedScore = safeStorage.get('highScore');
+    if (savedScore !== null) {
+      setHighScore(parseInt(savedScore));
     }
   }, []);
   
@@ -366,11 +363,7 @@ const Game = () => {
       if (audioEnabled) playError();
       if (score > highScore) {
         setHighScore(score);
-        try {
-          localStorage.setItem('highScore', score.toString());
-        } catch (error) {
-          console.warn('Erro ao salvar no localStorage:', error);
-        }
+        safeStorage.set('highScore', score);
       }
       // Reiniciar o jogo com uma única sequência após um breve delay
       setTimeout(() => {

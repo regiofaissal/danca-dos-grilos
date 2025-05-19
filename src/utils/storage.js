@@ -1,11 +1,15 @@
 // Wrapper seguro para localStorage
 const safeStorage = {
   get: (key) => {
+    if (typeof window === 'undefined' || !window.localStorage) {
+      console.warn('Local storage is not available');
+      return null;
+    }
     try {
       const value = localStorage.getItem(key);
       return value ? JSON.parse(value) : null;
     } catch (error) {
-      console.warn('Erro ao acessar localStorage:', error);
+      console.warn('Error accessing localStorage:', error);
       return null;
     }
   },

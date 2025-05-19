@@ -16,6 +16,7 @@ export default defineConfig({
       protocolImports: true
     })
   ],
+  base: '/danca-dos-grilos/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

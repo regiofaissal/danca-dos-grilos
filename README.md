@@ -1,12 +1,33 @@
-# React + Vite
+# Dança dos Grilos 🦗
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um jogo musical divertido onde você dança com grilos ao ritmo da música! Teste suas habilidades de ritmo e coordenação neste jogo envolvente.
 
-Currently, two official plugins are available:
+## Jogar Online
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Você pode jogar o jogo diretamente no seu navegador através do link:
+[Dança dos Grilos](https://regiofaissal.github.io/danca-dos-grilos/)
 
-## Expanding the ESLint configuration
+## Como Jogar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Use as setas do teclado para dançar
+2. Siga o ritmo da música
+3. Acerte os movimentos para marcar pontos
+
+## Desenvolvimento Local
+
+Para rodar o jogo localmente:
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/regiofaissal/danca-dos-grilos.git
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
